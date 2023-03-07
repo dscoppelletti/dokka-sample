@@ -1,0 +1,90 @@
+import org.jetbrains.dokka.DokkaConfiguration
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
+buildscript {
+    ext.dokka_version = '1.7.20'
+    ext.kotlin_version = '1.8.0'
+    ext.KOTLIN_BOM = "org.jetbrains.kotlin:kotlin-bom:${kotlin_version}"
+
+    repositories {
+        gradlePluginPortal()
+        mavenCentral()
+    }
+    dependencies {
+        classpath platform(KOTLIN_BOM)
+    }
+}
+
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.8.0'
+    id 'org.jetbrains.dokka' version '1.7.20'
+}
+
+group = 'it.scoppelletti.dokkasample'
+version = '1.0.0'
+description 'Dokka sample'
+archivesBaseName = 'dokkasample'
+
+def developerName = 'Dario Scoppelletti'
+def developerUrl = 'http://www.scoppelletti.it'
+def copyrightYear = '2023'
+
+kotlin {
+    explicitApi()
+    jvmToolchain(11)
+}
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    bom
+    api.extendsFrom(bom)
+    implementation.extendsFrom(bom)
+}
+
+dependencies {
+    bom platform(KOTLIN_BOM)
+}
+
+task cleanDokka(type: Delete) {
+    delete project.file('dokka')
+}
+
+dokkaHtml {
+    configure {
+        outputDirectory.set(project.file('dokka'))
+        moduleName.set(project.name)
+        moduleVersion.set(project.version)
+        suppressObviousFunctions.set(false)
+        suppressInheritedMembers.set(true)
+        offlineMode.set(true)
+        dokkaSourceSets {
+            named('main') {
+                documentedVisibilities.set([
+                        DokkaConfiguration.Visibility.PUBLIC,
+                        DokkaConfiguration.Visibility.PROTECTED])
+                skipDeprecated.set(false)
+                reportUndocumented.set(false)
+                skipEmptyPackages.set(true)
+                platform.set(Platform.jvm)
+                noJdkLink.set(true)
+                noAndroidSdkLink.set(true)
+                suppressGeneratedFiles.set(true)
+                includes.from('README.md')
+            }
+        }
+        pluginsMapConfiguration.set([
+                "org.jetbrains.dokka.base.DokkaBase": """{
+"footerMessage" : "Copyright(C) ${copyrightYear} <a href='${developerUrl}'>${developerName}</a>",
+"customStyleSheets" : [ "${project.file('etc/logo-styles.css')}" ]
+}"""
+        ])
+    }
+}
+
+jar {
+    dependsOn('cleanDokka', 'dokkaHtml')
+}
+

@@ -1,0 +1,27 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:it.scoppelletti.dokkasample.model////PointingToDeclaration/dokka-sample/it.scoppelletti.dokkasample.model/index.html
+$dokka.location:it.scoppelletti.dokkasample.model/Person///PointingToDeclaration/dokka-sample/it.scoppelletti.dokkasample.model/-person/index.html
+$dokka.location:it.scoppelletti.dokkasample.model/Person/Person/#kotlin.String#kotlin.String/PointingToDeclaration/dokka-sample/it.scoppelletti.dokkasample.model/-person/-person.html
+$dokka.location:it.scoppelletti.dokkasample.model/Person/component1/#/PointingToDeclaration/dokka-sample/it.scoppelletti.dokkasample.model/-person/component1.html
+$dokka.location:it.scoppelletti.dokkasample.model/Person/component2/#/PointingToDeclaration/dokka-sample/it.scoppelletti.dokkasample.model/-person/component2.html
+$dokka.location:it.scoppelletti.dokkasample.model/Person/copy/#kotlin.String#kotlin.String/PointingToDeclaration/dokka-sample/it.scoppelletti.dokkasample.model/-person/copy.html
+$dokka.location:it.scoppelletti.dokkasample.model/Person/firstName/#/PointingToDeclaration/dokka-sample/it.scoppelletti.dokkasample.model/-person/first-name.html
+$dokka.location:it.scoppelletti.dokkasample.model/Person/surname/#/PointingToDeclaration/dokka-sample/it.scoppelletti.dokkasample.model/-person/surname.html
+$dokka.location:it.scoppelletti.dokkasample.model/Pet///PointingToDeclaration/dokka-sample/it.scoppelletti.dokkasample.model/-pet/index.html
+$dokka.location:it.scoppelletti.dokkasample.model/Pet/Pet/#kotlin.String#kotlin.Int/PointingToDeclaration/dokka-sample/it.scoppelletti.dokkasample.model/-pet/-pet.html
+$dokka.location:it.scoppelletti.dokkasample.model/Pet/age/#/PointingToDeclaration/dokka-sample/it.scoppelletti.dokkasample.model/-pet/age.html
+$dokka.location:it.scoppelletti.dokkasample.model/Pet/component1/#/PointingToDeclaration/dokka-sample/it.scoppelletti.dokkasample.model/-pet/component1.html
+$dokka.location:it.scoppelletti.dokkasample.model/Pet/component2/#/PointingToDeclaration/dokka-sample/it.scoppelletti.dokkasample.model/-pet/component2.html
+$dokka.location:it.scoppelletti.dokkasample.model/Pet/copy/#kotlin.String#kotlin.Int/PointingToDeclaration/dokka-sample/it.scoppelletti.dokkasample.model/-pet/copy.html
+$dokka.location:it.scoppelletti.dokkasample.model/Pet/name/#/PointingToDeclaration/dokka-sample/it.scoppelletti.dokkasample.model/-pet/name.html
+$dokka.location:it.scoppelletti.dokkasample////PointingToDeclaration/dokka-sample/it.scoppelletti.dokkasample/index.html
+$dokka.location:it.scoppelletti.dokkasample/Greetings///PointingToDeclaration/dokka-sample/it.scoppelletti.dokkasample/-greetings/index.html
+$dokka.location:it.scoppelletti.dokkasample/Greetings/Greetings/#/PointingToDeclaration/dokka-sample/it.scoppelletti.dokkasample/-greetings/-greetings.html
+$dokka.location:it.scoppelletti.dokkasample/Greetings/hello/#/PointingToDeclaration/dokka-sample/it.scoppelletti.dokkasample/-greetings/hello.html
+$dokka.location:it.scoppelletti.dokkasample/PetLover///PointingToDeclaration/dokka-sample/it.scoppelletti.dokkasample/-pet-lover/index.html
+$dokka.location:it.scoppelletti.dokkasample/PetLover/PetLover/#/PointingToDeclaration/dokka-sample/it.scoppelletti.dokkasample/-pet-lover/-pet-lover.html
+$dokka.location:it.scoppelletti.dokkasample/PetLover/love/#it.scoppelletti.dokkasample.model.Person#it.scoppelletti.dokkasample.model.Pet/PointingToDeclaration/dokka-sample/it.scoppelletti.dokkasample/-pet-lover/love.html
+it.scoppelletti.dokkasample
+it.scoppelletti.dokkasample.model
+
