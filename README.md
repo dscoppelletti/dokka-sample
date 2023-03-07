@@ -1,6 +1,6 @@
 # Module dokka-sample
 
-Dokka Sample.
+Dokka ignores module and packages documentation from the README.md configured in build.gradle
 
 # Package it.scoppelletti.dokkasample
 
